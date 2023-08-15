@@ -2,7 +2,6 @@ package me.blueslime.scaredclans.menus;
 
 import me.blueslime.scaredclans.ScaredClans;
 import me.blueslime.scaredclans.storage.ClanStorage;
-import me.blueslime.scaredclans.storage.UserStorage;
 import me.blueslime.slimelib.file.configuration.ConfigurationHandler;
 import me.blueslime.slimelib.logs.SlimeLogs;
 import org.bukkit.entity.Player;
@@ -45,10 +44,6 @@ public abstract class AbstractMenu {
 
     public ClanStorage getClans() {
         return plugin.getStorage();
-    }
-
-    public UserStorage getUsers() {
-        return plugin.getUserLoader();
     }
 
     public String getUniqueId() {
