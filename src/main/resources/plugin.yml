@@ -1,0 +1,8 @@
+name: Clans
+version: '${project.version}'
+main: me.blueslime.scaredclans.ScaredClans
+api-version: 1.13
+author: JustJustin
+softdepend: [ PlaceholderAPI ]
+authors: [ JustJustin ]
+description: An advanced clan plugin

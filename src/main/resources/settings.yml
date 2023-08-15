@@ -1,0 +1,39 @@
+#  ███████████████████████████████████████████████████████████████████████
+#  █─▄▄▄▄█─▄▄▄─██▀▄─██▄─▄▄▀█▄─▄▄─█▄─▄▄▀███─▄▄▄─█▄─▄████▀▄─██▄─▀█▄─▄█─▄▄▄▄█
+#  █▄▄▄▄─█─███▀██─▀─███─▄─▄██─▄█▀██─██─███─███▀██─██▀██─▀─███─█▄▀─██▄▄▄▄─█
+#  █▄▄▄▄▄█▄▄▄▄▄█▄▄█▄███▄█▄▄██▄▄▄▄█▄▄▄▄████▄▄▄▄▄█▄▄▄▄▄█▄▄█▄▄█▄▄▄██▄▄█▄▄▄▄▄█
+#
+#  Created by JustJustin
+#  My own version of the 'Clans' plugin.
+#
+settings:
+  # In minutes
+  clear-damage-cache-timer: 5
+  # When is enabled it uses player's UUID, when is not it uses the player's name
+  online-mode: false
+  # In seconds (This is like a combat log but for clan kills
+  damage-expiration: 30
+  # This is the name length of the clan
+  name-length: 10
+  # This is the tag length of the clan
+  tag-length: 3
+  # Damage settings of the plugin
+  damage:
+    between-members: false
+    self: false
+  limit:
+    members: 10
+    name-matcher:
+      match: "^[a-zA-Z0-9]*$"
+    creation-price:
+      enabled: true
+      value: 25000
+
+hooks:
+  # This will hook vault with the clans plugin, so if you have the price enabled,
+  # vault will be used to remove the balance from players
+  vault: true
+
+# Here you can blacklist words for clan names
+# so if a player tries to register a clan and that clan name contains a blocked word, it will blocked name. It will be blocked
+blacklisted-clan-names: []
