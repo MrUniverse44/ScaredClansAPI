@@ -1,20 +1,20 @@
-package me.blueslime.scaredclans.storage;
+package me.blueslime.scaredclans.services.clan;
 
 import java.io.File;
 import java.util.*;
 
-import me.blueslime.scaredclans.ScaredClans;
+import me.blueslime.bukkitmeteor.implementation.module.RegisteredModule;
 import me.blueslime.scaredclans.clan.Clan;
 import me.blueslime.scaredclans.storage.internal.PluginStorage;
 import org.bukkit.entity.Player;
 
 @SuppressWarnings("unused")
-public class ClanStorage {
+public class ClanService implements RegisteredModule {
 
     private static final PluginStorage<String, String> USER_CLAN_STORAGE = PluginStorage.initAsConcurrentHash();
     private static final PluginStorage<String, Clan> CLAN_STORAGE = PluginStorage.initAsHash();
 
-    public ClanStorage(ScaredClans plugin) {
+    public ClanService() {
     }
 
     public void update() {

@@ -1,6 +1,6 @@
 package me.blueslime.scaredclans.runnable;
 
-import me.blueslime.slimelib.logs.SlimeLogs;
+import me.blueslime.bukkitmeteor.logs.MeteorLogger;
 import me.blueslime.scaredclans.ScaredClans;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -40,7 +40,7 @@ public abstract class PluginRunnable extends BukkitRunnable {
         return plugin;
     }
 
-    public SlimeLogs getLogs() {
+    public MeteorLogger getLogs() {
         return plugin.getLogs();
     }
 
@@ -74,3 +74,4 @@ public abstract class PluginRunnable extends BukkitRunnable {
         return super.runTaskTimerAsynchronously(plugin, delay, period);
     }
 }
+

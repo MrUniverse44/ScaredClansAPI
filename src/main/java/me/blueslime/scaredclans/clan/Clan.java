@@ -1,7 +1,7 @@
 package me.blueslime.scaredclans.clan;
 
-import me.blueslime.slimelib.file.configuration.ConfigurationHandler;
 import me.blueslime.scaredclans.ScaredClans;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
 import java.io.File;
@@ -19,7 +19,7 @@ public class Clan {
 
     }
 
-    private Clan(ConfigurationHandler settings, String id) {
+    private Clan(FileConfiguration settings, String id) {
 
     }
 
@@ -27,7 +27,7 @@ public class Clan {
         return new Clan(plugin, id, file);
     }
 
-    public static Clan of(ConfigurationHandler settings, String id) {
+    public static Clan of(FileConfiguration settings, String id) {
         return new Clan(settings, id);
     }
 
@@ -109,6 +109,6 @@ public class Clan {
         return Collections.emptyList();
     }
 
-    public void save(ScaredClans plugin) {
+    public void save() {
     }
 }
